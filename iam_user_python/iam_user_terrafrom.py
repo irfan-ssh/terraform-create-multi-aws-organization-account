@@ -37,7 +37,7 @@ for account_id in account_ids:
         secret_key = create_key["AccessKey"]["SecretAccessKey"]
 
         with open('data.txt', 'a') as f:  # Use 'a' to append to the file
-            f.write(f'{access_key}  {secret_key}\n')
+            f.write(f'{access_key}:{secret_key}\n')
 
         print(f'User updated in Account ID: {account_id} and written to data.txt file')
     except Exception as e:

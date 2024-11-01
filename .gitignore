@@ -1,0 +1,4 @@
+aws_or_account_terraform/.terraform.lock.hcl
+aws_or_account_terraform/terraform.tfstate
+aws_or_account_terraform/.terraform/*
+*.terraform
