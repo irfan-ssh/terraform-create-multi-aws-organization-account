@@ -11,7 +11,6 @@ terraform {
 }
 provider "aws" {
   region = var.region
-  profile = "user1"
 }
 
 #############################################
@@ -47,7 +46,7 @@ variable "num_accounts" {
 # IAM USER ROLE AND POLICY FOR ASSUME ACCOUNT 
 #############################################
 resource "aws_iam_role" "role" {
-  name = "Admin"
+  name = "Admin3rdParty"
   assume_role_policy = jsonencode(
     {
       "Version" : "2012-10-17",

@@ -1,6 +1,6 @@
-account_id       = "xxxxxxxxxxxx"
+account_id       = "891376936006"
 region           = "us-east-1"
-email_name       = "AlbertAWS0"
-email_domain     = "gmail.com"
-aws_account_name = "AWS"
-num_accounts     = 620
+email_name       = "stg"
+email_domain     = "boigenx.com"
+aws_account_name = "stg-"
+num_accounts     = 50
