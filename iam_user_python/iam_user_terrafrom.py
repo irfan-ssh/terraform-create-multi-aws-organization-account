@@ -1,5 +1,5 @@
 import boto3
-
+import time
 account_file = input("Please enter Account id file path ::  ")
 # Read account IDs from account.txt
 with open(account_file, 'r') as f:
@@ -9,7 +9,7 @@ for account_id in account_ids:
     # Assume a role in the AWS account
     sts_client = boto3.client("sts")
     assumed_role = sts_client.assume_role(
-        RoleArn=f"arn:aws:iam::{account_id}:role/Admin",
+        RoleArn=f"arn:aws:iam::{account_id}:role/Admin3rdParty",
         RoleSessionName="AssumedRoleSession",
     )
 
@@ -38,6 +38,7 @@ for account_id in account_ids:
 
         with open('data.txt', 'a') as f:  # Use 'a' to append to the file
             f.write(f'{access_key}:{secret_key}\n')
+            time.sleep(50)
 
         print(f'User updated in Account ID: {account_id} and written to data.txt file')
     except Exception as e:
