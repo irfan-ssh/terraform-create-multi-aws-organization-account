@@ -38,7 +38,7 @@ for account_id in account_ids:
 
         with open('data.txt', 'a') as f:  # Use 'a' to append to the file
             f.write(f'{access_key}:{secret_key}\n')
-            time.sleep(50)
+            time.sleep(400)
 
         print(f'User updated in Account ID: {account_id} and written to data.txt file')
     except Exception as e:

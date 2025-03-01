@@ -10,8 +10,11 @@ terraform {
   }
 }
 provider "aws" {
-  region = var.region
+  region     = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
+
 
 #############################################
 # MAIN CODE TO CRATE ORGANIZATION ACCOUNTS
@@ -39,6 +42,18 @@ variable "email_name" {}
 variable "email_domain" {}
 variable "region" {}
 variable "aws_account_name" {}
+variable "access_key" {
+  description = "AWS access key"
+  type        = string
+  sensitive   = true
+}
+
+variable "secret_key" {
+  description = "AWS secret key"
+  type        = string
+  sensitive   = true
+}
+
 variable "num_accounts" {
   type = number
 }
